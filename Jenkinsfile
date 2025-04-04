@@ -37,7 +37,7 @@ pipeline {
                 echo 'Deploying to Azure...'
                 sh """
                     az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET --tenant $AZURE_TENANT_ID
-                    az functionapp deployment source config-zip --resource-group HelloRG --name HelloFunctionApp8986104 --src function.zip
+                    az functionapp deployment source config-zip --resource-group HelloRG --name hellorg-8986104 --src function.zip
                 """
             }
         }
