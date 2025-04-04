@@ -1,6 +1,5 @@
-const chai = require('chai');
-const expect = chai.expect;
-const helloWorldFunction = require('../index'); // Adjust path if needed
+import { expect } from 'chai';
+import { helloWorldFunction } from '../HttpTrigger1/index.js'; // Adjust path if needed
 
 describe('Azure Hello World Function', () => {
   it('should return a response object', async () => {
