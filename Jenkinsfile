@@ -22,15 +22,15 @@ pipeline {
         }
 
         stage('Package') {
-    echo 'Zipping the Azure Function code...'
-    steps {
-        script {
-            powershell '''
-                Compress-Archive -Path . -DestinationPath function.zip
-            '''
+            steps {
+                echo 'Zipping the Azure Function code...'
+                script {
+                    powershell '''
+                        Compress-Archive -Path . -DestinationPath function.zip
+                    '''
+                }
+            }
         }
-    }
-}
 
         stage('Deploy') {
             steps {
