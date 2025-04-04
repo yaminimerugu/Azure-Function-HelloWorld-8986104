@@ -26,7 +26,7 @@ pipeline {
                 echo 'Zipping the Azure Function code...'
                 script {
                     powershell '''
-                        Compress-Archive -Path . -DestinationPath function.zip
+                        Compress-Archive -Path . -DestinationPath function.zip -Force
                     '''
                 }
             }
